@@ -3,7 +3,7 @@
 Advanced Arduino UNO-based robot with Bluetooth control, dual ultrasonic obstacle avoidance, servo mechanism, and intelligent bin-full sensing.
 
 ## 🚀 Features
-- **Dual Mode Control:** Toggle between Car Movement and Servo Control with a single button.
+- **Dual Mode Control:** Toggle between Robot Movement and Servo Control with a single button.
 - **Smart Obstacle Avoidance:** Automatic front/back detection with safety retreat logic.
 - **Bin Full Sensing:** Intelligent IR-based capacity monitoring with visual/auditory alerts.
 - **Power Safety:** Smooth servo movements and slow power-on sweeps to prevent Arduino resets.
@@ -46,39 +46,17 @@ Advanced Arduino UNO-based robot with Bluetooth control, dual ultrasonic obstacl
 ---
 
 ## 📱 App Configuration (BT Controller)
-Use the **BT Controller** app or **Bluetooth Electronics** app. Map the following characters to your UI:
+Use the **[BT Controller](https://play.google.com/store/apps/details?id=com.giristuido.bluetooth.car.controller)** app or **[Bluetooth Electronics](http://www.keuwl.com/apps/bluetoothelectronics/)** app. Map the following characters to your UI:
 
 | Command | Character | Function |
 | :--- | :---: | :--- |
-| Forward / Backward | `F` / `B` | Move robot (Car Mode) or Move servos (Servo Mode) |
+| Forward / Backward | `F` / `B` | Move robot (Move Mode) or Move servos (Servo Mode) |
 | Turn Left / Right | `L` / `R` | Rotate in place |
 | Stop | `S` | Emergency stop |
-| **Toggle Mode** | `X` | Switch between Car and Servo control |
+| **Toggle Mode** | `X` | Switch between Move and Servo control |
 | Horn | `Y` | Sound buzzer |
 | Headlight ON/OFF | `U` / `u` | Toggle LED on A5 |
 | Speed 1-4 | `1`-`4` | Set motor speed (25%-100%) |
-
----
-
-## 📝 Installation
-
-### Step 1: Install Libraries
-Open Arduino IDE and install the following libraries via **Sketch > Include Library > Manage Libraries**:
-1. `Adafruit Motor Shield library` (search "AFMotor")
-2. `NewPing` (by Tim Eckel)
-3. `Servo` (built-in, already available)
-
-### Step 2: Upload Code
-1. Connect Arduino UNO via USB.
-2. **Disconnect HC-05 Bluetooth TX/RX pins** (to avoid serial conflicts).
-3. Open `Robot_Project_4_0_John.ino`.
-4. Select **Board: Arduino UNO** and the correct **COM Port**.
-5. Click **Upload**.
-
-### Step 3: Reconnect Bluetooth
-After upload completes, reconnect the HC-05 module:
-- HC-05 TX → Arduino RX (D0)
-- HC-05 RX → Arduino TX (D1)
 
 ---
 
@@ -104,12 +82,12 @@ Once the bin is cleared, normal operation resumes automatically.
 
 ## 📦 Upload Pre-Compiled Firmware (.hex)
 
-If you have the **pre-compiled `.hex` file** (protected binary), you can upload it without the source code:
+If you have the **pre-compiled `.hex` file** (binary), you can upload it without the source code:
 
 ### Method 1: Using XLoader (Easiest)
 1. Download [XLoader](https://github.com/binaryupdates/xLoader) for Windows.
 2. Open XLoader and configure:
-   - **Hex file:** Select `Robot_Project_4_0_John_PROTECTED.hex`
+   - **Hex file:** Select `Robot_Project_4_0_John.hex`
    - **Device:** `Uno(ATmega328)`
    - **COM port:** Select your Arduino's port
    - **Baud rate:** `115200`
@@ -117,7 +95,7 @@ If you have the **pre-compiled `.hex` file** (protected binary), you can upload 
 
 ### Method 2: Using avrdude (Command Line)
 ```bash
-avrdude -v -patmega328p -carduino -PCOM3 -b115200 -D -Uflash:w:Robot_Project_4_0_John_PROTECTED.hex:i
+avrdude -v -patmega328p -carduino -PCOM3 -b115200 -D -Uflash:w:Robot_Project_4_0_John.hex:i
 ```
 > Replace `COM3` with your Arduino's COM port.
 
@@ -126,7 +104,12 @@ avrdude -v -patmega328p -carduino -PCOM3 -b115200 -D -Uflash:w:Robot_Project_4_0
 2. Go to **Sketch → Upload Using Programmer** (requires ISP programmer).
 3. Or use **Tools → Burn Bootloader** first if needed.
 
-> ⚠️ **Note:** The `.hex` file is a protected binary. Source code is not included for intellectual property protection.
+> ⚠️ **Note:** The `.hex` file is a binary.
+
+### Reconnect Bluetooth
+After upload completes, reconnect the HC-05 module:
+- HC-05 TX → Arduino RX (D0)
+- HC-05 RX → Arduino TX (D1)
 
 ---
 
@@ -137,7 +120,7 @@ avrdude -v -patmega328p -carduino -PCOM3 -b115200 -D -Uflash:w:Robot_Project_4_0
 | Arduino restarts on servo move | Increase `delay()` in `serUp()`/`serDown()` or use external power for servos |
 | Robot won't move | Check motor shield connections and ensure battery has charge |
 | Bluetooth not connecting | Ensure HC-05 is in pairing mode (blinking LED) and paired to your phone |
-| Bin sensor always triggers | Adjust IR sensor sensitivity potentiometer or check mounting position |
+| Bin full sensor always triggers | Adjust IR sensor sensitivity potentiometer or check mounting position |
 
 ---
 
@@ -148,6 +131,5 @@ Remixing or commercial use is **not allowed**.
 ---
 
 ## 👤 Author
-**John Varghese**  
-- YouTube: [@trendy_ned](https://youtube.com/@trendy_ned)  
+**John Varghese (J0X)**
 - Instagram: [@cyber__trinity](https://www.instagram.com/cyber__trinity/) | [@john__varghese](https://www.instagram.com/john__varghese/)
