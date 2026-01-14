@@ -102,6 +102,34 @@ Once the bin is cleared, normal operation resumes automatically.
 
 ---
 
+## 📦 Upload Pre-Compiled Firmware (.hex)
+
+If you have the **pre-compiled `.hex` file** (protected binary), you can upload it without the source code:
+
+### Method 1: Using XLoader (Easiest)
+1. Download [XLoader](https://github.com/binaryupdates/xLoader) for Windows.
+2. Open XLoader and configure:
+   - **Hex file:** Select `Robot_Project_4_0_John_PROTECTED.hex`
+   - **Device:** `Uno(ATmega328)`
+   - **COM port:** Select your Arduino's port
+   - **Baud rate:** `115200`
+3. Click **Upload** and wait for completion.
+
+### Method 2: Using avrdude (Command Line)
+```bash
+avrdude -v -patmega328p -carduino -PCOM3 -b115200 -D -Uflash:w:Robot_Project_4_0_John_PROTECTED.hex:i
+```
+> Replace `COM3` with your Arduino's COM port.
+
+### Method 3: Using Arduino IDE
+1. Open Arduino IDE.
+2. Go to **Sketch → Upload Using Programmer** (requires ISP programmer).
+3. Or use **Tools → Burn Bootloader** first if needed.
+
+> ⚠️ **Note:** The `.hex` file is a protected binary. Source code is not included for intellectual property protection.
+
+---
+
 ## 🔧 Troubleshooting
 
 | Issue | Solution |

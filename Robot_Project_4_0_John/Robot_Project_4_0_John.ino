@@ -18,6 +18,16 @@ This Program is created for Exbition/Display purpose only. The all credits are t
 #include <NewPing.h>
 #include <Servo.h>
 
+// ==================== EMBEDDED ATTRIBUTION =========================
+const char ATTRIBUTION[] PROGMEM = 
+  "Falcon Robot v4.0.3 | "
+  "Author: John Varghese | "
+  "Instagram: @cyber__trinity @john__varghese | "
+  "YouTube: youtube.com/@trendy_ned | "
+  "License: All Rights Reserved - No Commercial Use | "
+  "Created: 2026";
+// ===================================================================
+
 // Motor definitions
 AF_DCMotor MotorFR(1);   // Front right
 AF_DCMotor MotorFL(2);   // Front left
