@@ -1,0 +1,62 @@
+# LICENSE
+
+## All Rights Reserved
+
+**Copyright © 2026 John Varghese. All rights reserved.**
+
+---
+
+### Terms and Conditions
+
+This software, including all source code, documentation, hardware designs, and associated files (collectively, the "Work"), is the exclusive intellectual property of **John Varghese**.
+
+By accessing, viewing, or obtaining a copy of this Work, you agree to the following terms:
+
+---
+
+### ❌ You are NOT permitted to:
+
+1. **Copy** – Reproduce, duplicate, or make copies of any part of this Work.
+2. **Modify** – Alter, transform, adapt, or create derivative works based on this Work.
+3. **Distribute** – Share, publish, transmit, or otherwise make this Work available to any third party.
+4. **Sell** – Offer for sale, license, or sublicense this Work or any portion thereof.
+5. **Commercial Use** – Use this Work, in whole or in part, for any commercial purpose or financial gain.
+6. **Reverse Engineer** – Decompile, disassemble, or attempt to derive the source code or design principles of this Work.
+7. **Claim Ownership** – Represent yourself as the author or owner of this Work.
+8. **Remove Attribution** – Delete, obscure, or alter any copyright notices, author credits, or license information.
+
+---
+
+### ✅ Permitted Use:
+
+This Work is provided **for exhibition, educational demonstration, and personal viewing purposes only**.
+
+You may:
+- View the code for personal learning (without copying).
+- Reference this project in academic citations with proper attribution.
+
+---
+
+### Disclaimer
+
+THIS WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. THE AUTHOR SHALL NOT BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM THE USE OR INABILITY TO USE THIS WORK.
+
+---
+
+### Enforcement
+
+Any unauthorized use, reproduction, or distribution of this Work may result in legal action under applicable copyright and intellectual property laws.
+
+---
+
+### Contact
+
+For licensing inquiries or permission requests, contact the author:
+
+- **Author:** John Varghese
+- **YouTube:** [@trendy_ned](https://youtube.com/@trendy_ned)
+- **Instagram:** [@cyber__trinity](https://www.instagram.com/cyber__trinity/)
+
+---
+
+**This license is effective as of January 2026 and applies to all versions of the Falcon Robot Project.**
