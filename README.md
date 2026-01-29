@@ -31,7 +31,7 @@ Traditional waste collection is inefficient, labor-intensive, and often overlook
 | ⚡ **Power-Safe Servos** | Slow power-on sweeps prevent current surges and Arduino brownouts |
 | 📱 **Smartphone Bluetooth Control** | Works with popular BT Controller apps — no custom app needed |
 | 💡 **Multi-LED Status System** | Dedicated visual feedback for obstacle detection, mode status, and alerts |
-| 🔧 **Easy Firmware Upload** | Pre-compiled `.hex` file for instant deployment without source code |
+| 🔧 **Easy Firmware Upload** | Pre-compiled `.hex` file for instant deployment |
 
 ---
 
@@ -56,7 +56,7 @@ Built with widely available components:
 - HC-SR04 Ultrasonic Sensors
 - Standard SG90 Servos
 
-**Total cost: Under $50** — making it perfect for educational institutions with limited budgets.
+**Less cost making it perfect for educational institutions/students with limited budgets.
 
 ### 5. **Professional Documentation**
 Comprehensive wiring diagrams, pinout tables, troubleshooting guides, and multiple firmware upload methods. This project is **ready to replicate**.
@@ -103,7 +103,7 @@ Falcon works with standard Bluetooth controller apps available on the Play Store
 | Action | Command | What It Does |
 | :--- | :---: | :--- |
 | Movement | `F` `B` `L` `R` | Drive or control servos (mode-dependent) |
-| Mode Switch | `X` | Toggle between car and arm control |
+| Mode Switch | `X` | Toggle between wheel and arm control |
 | Horn | `Y` | Sound the buzzer |
 | Headlight | `U` / `u` | Toggle LED on/off |
 | Speed | `1`-`4` | Adjust motor speed (25%–100%) |
